@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_VYqbAI2VEeeV1ruI9fdkBQ" targetNamespace="http://tns.tibco.com/bw/composite/BWCE_DOCKER.module" name="BWCE_DOCKER.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_b6RwEo2kEeeV1ruI9fdkBQ" name="getaddress" promote="ComponentGetLocation/getaddress">
+    <sca:interface.wsdl xmi:id="_b6RwFo2kEeeV1ruI9fdkBQ" interface="http://xmlns.example.com/20170830222752PLT#wsdl.interface(getaddress)"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_b6RwF42kEeeV1ruI9fdkBQ" name="RestService" path="/getaddress" docBasePath="http://localhost:7777/BWCE_DOCKER.module" docResourcePath="getaddress" basePath="/" connector="bwce_docker.module.getaddress" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/bwce_docker.module.GetLocation-getaddress.json">
+      <operation xmi:id="_b6RwGI2kEeeV1ruI9fdkBQ" operationName="get" nickname="get-getaddress" httpMethod="GET" responseStyle="element">
+        <parameters xmi:id="_o72wAI2kEeeV1ruI9fdkBQ">
+          <parameterMapping xmi:id="_o72wAY2kEeeV1ruI9fdkBQ" parameterName="loc" parameterType="Query" dataType="string"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_b6krAI2kEeeV1ruI9fdkBQ"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_b6RwGY2kEeeV1ruI9fdkBQ" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_YFLroI2VEeeV1ruI9fdkBQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_YF1y8I2VEeeV1ruI9fdkBQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_YGFqkI2VEeeV1ruI9fdkBQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_YGWJQI2VEeeV1ruI9fdkBQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_YGt8sI2VEeeV1ruI9fdkBQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_YG-bYI2VEeeV1ruI9fdkBQ" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_YHNE4I2VEeeV1ruI9fdkBQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_XNWt8I2kEeeV1ruI9fdkBQ" name="ComponentGetLocation" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_XNWt8Y2kEeeV1ruI9fdkBQ" processName="bwce_docker.module.GetLocation"/>
+    <sca:service xmi:id="_b6RwEI2kEeeV1ruI9fdkBQ" name="getaddress">
+      <sca:interface.wsdl xmi:id="_b6RwEY2kEeeV1ruI9fdkBQ" interface="http://xmlns.example.com/20170830222752PLT#wsdl.interface(getaddress)"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

@@ -1,0 +1,13 @@
+{
+    "records": [],
+    "resources": [
+        {
+            "location": "Service Descriptors/bwce_docker.module.Process-getDetails.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/bwce_docker.module.GetLocation-getaddress.json",
+            "type": "generated"
+        }
+    ]
+}
